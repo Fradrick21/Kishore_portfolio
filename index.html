@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kishore Kumar R - Graphic & UI/UX Designer</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scan"></div>
+<div id="cur"></div>
+<div id="cur-ring"></div>
+
+<nav>
+  <a href="#" class="nav-logo">KK<span>.</span>DESIGN</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#edu">Education</a></li>
+    <li><a href="#certs">Certs</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <ul>
+    <li><a href="#about" onclick="closeDrawer()">About</a></li>
+    <li><a href="#skills" onclick="closeDrawer()">Skills</a></li>
+    <li><a href="#projects" onclick="closeDrawer()">Projects</a></li>
+    <li><a href="#edu" onclick="closeDrawer()">Education</a></li>
+    <li><a href="#certs" onclick="closeDrawer()">Certs</a></li>
+    <li><a href="#contact" onclick="closeDrawer()">Contact</a></li>
+  </ul>
+</div>
+
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-badge"><div class="dot"></div>Available for Creative Work</div>
+    <p class="hero-greeting">Hi, I'm <span>Kishore Kumar R</span></p>
+    <h1 class="hero-name">Graphic &<br><span class="cyan">UI/UX Designer</span></h1>
+    <div class="hero-tags">
+      <span class="htag">Graphic Design</span>
+      <span class="htag">UI/UX Design</span>
+      <span class="htag">Figma</span>
+      <span class="htag">Tiruchirappalli</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#projects" class="btn-blue">View Projects</a>
+      <a href="#contact" class="btn-outline">Contact Me</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-n">2<span>+</span></div>
+        <div class="stat-l">Design Projects</div>
+      </div>
+      <div>
+        <div class="stat-n">9<span>+</span></div>
+        <div class="stat-l">Core Skills</div>
+      </div>
+      <div>
+        <div class="stat-n">3<span>+</span></div>
+        <div class="stat-l">Certificates</div>
+      </div>
+      <div>
+        <div class="stat-n">UI<span></span></div>
+        <div class="stat-l">Design Focus</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="orbit-wrap" id="orbitWrap">
+      <div class="o-ring o-ring-1"></div>
+      <div class="o-ring o-ring-2"></div>
+      <div class="o-ring o-ring-3"></div>
+
+      <div class="orbit-photo" id="photoEl">
+        <img src="Images/Kishore.jpg" alt="Kishore Kumar R" decoding="async">
+      </div>
+    </div>
+
+    <div class="hero-strip">
+      <span class="hs-item">Figma</span>
+      <span class="hs-item">Adobe XD</span>
+      <span class="hs-item">Photoshop</span>
+      <span class="hs-item">Illustrator</span>
+      <span class="hs-item">Canva</span>
+      <span class="hs-item">CorelDRAW</span>
+    </div>
+  </div>
+</section>
+<div class="neon-line"></div>
+
+<section id="about">
+  <div class="section-tag reveal">Who I Am</div>
+  <h2 class="section-title reveal">About <span>Me</span></h2>
+  <div class="about-grid reveal">
+    <div class="about-text">
+      <p>I'm <strong>Kishore Kumar R</strong>, a creative and passionate Graphic & UI/UX Designer based in Tiruchirappalli.</p>
+      <p>I create user-friendly interfaces, branding materials, and digital designs using industry-standard design tools. My work focuses on visually appealing layouts, clear navigation, and engaging digital experiences.</p>
+      <p>I am interested in building modern creative solutions and continuously improving my design skills through practical projects and hands-on learning.</p>
+      <div class="about-highlights">
+        <div class="ah-item"><span class="ah-icon">LOC</span><span>Tiruchirappalli</span></div>
+        <div class="ah-item"><span class="ah-icon">EDU</span><span>M.A. History - Bishop Heber College</span></div>
+        <div class="ah-item"><span class="ah-icon">UX</span><span>Graphic & UI/UX Designer</span></div>
+        <div class="ah-item"><span class="ah-icon">MAIL</span><span>kishorekuz98@gmail.com</span></div>
+      </div>
+    </div>
+    <div class="about-skills-aside">
+      <div class="aside-block">
+        <div class="aside-title">Design</div>
+        <div class="aside-tags"><span class="stag">Graphic Design</span><span class="stag">UI/UX Design</span><span class="stag">User Interface</span><span class="stag">Branding</span></div>
+      </div>
+      <div class="aside-block">
+        <div class="aside-title">Adobe Tools</div>
+        <div class="aside-tags"><span class="stag">Photoshop</span><span class="stag">Adobe XD</span><span class="stag">Illustrator</span></div>
+      </div>
+      <div class="aside-block">
+        <div class="aside-title">Product Tools</div>
+        <div class="aside-tags"><span class="stag">Figma</span><span class="stag">Canva</span><span class="stag">CorelDRAW</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="neon-line"></div>
+
+<section id="skills">
+  <div class="section-tag reveal">Skills & Expertise</div>
+  <div class="sh reveal">
+    <h2 class="section-title">What I<br><span>Design</span></h2>
+    <a href="#contact" class="view-all">Hire Me</a>
+  </div>
+
+  <div class="skills-grid stag-c">
+    <div class="sk-card">
+      <div class="sk-num">01</div>
+      <div class="sk-icon">UI</div>
+      <div class="sk-title">UI/UX Design</div>
+      <p class="sk-desc">Designing user-friendly screens, layouts, flows, and navigation systems for digital products.</p>
+      <div class="sk-tags"><span class="stag">UI Design</span><span class="stag">UX Design</span><span class="stag">Figma</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-num">02</div>
+      <div class="sk-icon">GD</div>
+      <div class="sk-title">Graphic Design</div>
+      <p class="sk-desc">Creating clean visual designs, branding materials, posters, and digital creatives for modern audiences.</p>
+      <div class="sk-tags"><span class="stag">Branding</span><span class="stag">Posters</span><span class="stag">Creatives</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-num">03</div>
+      <div class="sk-icon">AD</div>
+      <div class="sk-title">Adobe Tools</div>
+      <p class="sk-desc">Working with Photoshop, Adobe XD, and Illustrator for interface concepts and polished visuals.</p>
+      <div class="sk-tags"><span class="stag">Photoshop</span><span class="stag">Adobe XD</span><span class="stag">Illustrator</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-num">04</div>
+      <div class="sk-icon">FG</div>
+      <div class="sk-title">Figma Design</div>
+      <p class="sk-desc">Building app and website concepts with structured layouts, reusable components, and prototype-ready screens.</p>
+      <div class="sk-tags"><span class="stag">Figma</span><span class="stag">Wireframes</span><span class="stag">Prototype</span></div>
+    </div>
+    <div class="sk-card">
+      <div class="sk-num">05</div>
+      <div class="sk-icon">CV</div>
+      <div class="sk-title">Creative Tools</div>
+      <p class="sk-desc">Using Canva and CorelDRAW to create practical graphics, quick layouts, and presentation-ready assets.</p>
+      <div class="sk-tags"><span class="stag">Canva</span><span class="stag">CorelDRAW</span><span class="stag">Layout</span></div>
+    </div>
+  </div>
+</section>
+<div class="neon-line"></div>
+
+<section id="projects">
+  <div class="section-tag reveal">Portfolio</div>
+  <div class="sh reveal">
+    <h2 class="section-title">Featured<br><span>Projects</span></h2>
+    <a href="#contact" class="view-all">Discuss Work</a>
+  </div>
+  <div class="proj-grid stag-c">
+    <div class="proj-card">
+      <button class="proj-thumb proj-thumb-img project-output" type="button" data-full="Images/SKYL.png" data-title="SKYL - Smart School Management App">
+        <img src="Images/SKYL.png" alt="SKYL - Smart School Management App" loading="lazy" decoding="async">
+        <span class="output-label">View Output</span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-num">01 / Mobile App</div>
+        <div class="proj-name">SKYL - Smart School Management App</div>
+        <button class="case-btn" type="button" data-case="skyl">Case Study</button>
+        <p class="proj-desc">Designed a modern and user-friendly school management mobile application focused on improving student learning and communication.</p>
+        <p class="proj-desc">Included attendance tracking, timetable management, homework updates, exam notifications, chat, eco rewards, and student performance reports.</p>
+        <div class="proj-tags"><span class="stag">Figma</span><span class="stag">Mobile UI</span><span class="stag">Education</span><span class="stag">UX Flow</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <button class="proj-thumb proj-thumb-img proj-thumb-restaurant project-output" type="button" data-full="Images/Restaurant.jpg" data-title="BOFFI - Korean Restaurant Website">
+        <img src="Images/Restaurant.jpg" alt="BOFFI Korean restaurant website project output" loading="lazy" decoding="async">
+        <span class="output-label">View Output</span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-num">02 / Website</div>
+        <div class="proj-name">BOFFI - Korean Restaurant Website</div>
+        <button class="case-btn" type="button" data-case="boffi">Case Study</button>
+        <p class="proj-desc">A modern Korean restaurant website designed with a premium dark-theme aesthetic inspired by Korean nightlife and street-food culture.</p>
+        <p class="proj-desc">The design uses bold typography, cinematic food photography, glowing red highlights, responsive menu sections, dish showcases, testimonials, and immersive visual storytelling.</p>
+        <div class="proj-tags"><span class="stag">Figma</span><span class="stag">Photoshop</span><span class="stag">Dark UI</span><span class="stag">Restaurant Website</span><span class="stag">Responsive Design</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <button class="proj-thumb proj-thumb-img project-output" type="button" data-full="Images/P-1.jpg" data-title="Abstract Vision - Eye of Creativity">
+        <img src="Images/P-1.jpg" alt="Abstract Vision - Eye of Creativity project output" loading="lazy" decoding="async">
+        <span class="output-label">View Output</span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-num">03 / Illustration</div>
+        <div class="proj-name">Abstract Vision - Eye of Creativity</div>
+        <button class="case-btn" type="button" data-case="abstract">Case Study</button>
+        <p class="proj-desc">A conceptual abstract artwork that blends an expressive eye with organic floral elements to symbolize creativity, vision, and imagination.</p>
+        <p class="proj-desc">The vibrant color palette represents bold thinking and artistic expression, creating a unique visual identity.</p>
+        <div class="proj-tags"><span class="stag">Illustrator</span><span class="stag">Abstract Art</span><span class="stag">Visual Identity</span><span class="stag">Creative Design</span></div>
+      </div>
+    </div>
+    <div class="proj-card">
+      <button class="proj-thumb proj-thumb-img proj-thumb-dark project-output" type="button" data-full="Images/P-2.gif" data-title="Dual Perspective - Abstract Face Composition">
+        <img src="Images/P-2.gif" alt="Dual Perspective - Abstract Face Composition project output" loading="lazy" decoding="async">
+        <span class="output-label">View Output</span>
+      </button>
+      <div class="proj-body">
+        <div class="proj-num">04 / Vector Illustration</div>
+        <div class="proj-name">Dual Perspective - Abstract Face Composition</div>
+        <button class="case-btn" type="button" data-case="dual">Case Study</button>
+        <p class="proj-desc">An abstract visual artwork that explores duality, identity, and perception through overlapping human profiles and surreal composition.</p>
+        <p class="proj-desc">The bold contrast of shapes and colors creates a modern artistic expression of emotions and perspective.</p>
+        <div class="proj-tags"><span class="stag">Adobe Illustrator</span><span class="stag">Pen Tool</span><span class="stag">Shape Builder</span><span class="stag">Pathfinder</span><span class="stag">Vector Illustration</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="neon-line"></div>
+
+<section id="edu">
+  <div class="section-tag reveal">Education</div>
+  <h2 class="section-title reveal">Academic<br><span>Background</span></h2>
+  <div class="exp-row reveal">
+    <div>
+      <div class="exp-date">04/2025</div>
+      <div class="exp-co">Bishop Heber College, Tiruchirappalli</div>
+    </div>
+    <div>
+      <div class="exp-role">M.A. History</div>
+      <ul class="exp-ul">
+        <li>Completed postgraduate studies at Bishop Heber College, Tiruchirappalli.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="exp-row reveal">
+    <div>
+      <div class="exp-date">04/2023</div>
+      <div class="exp-co">Bishop Heber College</div>
+    </div>
+    <div>
+      <div class="exp-role">B.A. History</div>
+      <ul class="exp-ul">
+        <li>Completed undergraduate studies with a foundation in research, communication, and presentation.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="neon-line"></div>
+
+<section id="certs" style="background:var(--bg2)">
+  <div class="section-tag reveal">Recognition</div>
+  <h2 class="section-title reveal">Certificates & Internship</h2>
+  <div class="certs-grid stag-c">
+    <button class="cert-card" type="button">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="cert-ico">UI</div>
+          <div class="cert-title">UI Designer Course</div>
+          <div class="cert-sub">Completed at iLife Academy</div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <div class="cert-back-content">Practical UI course covering Figma, prototyping, and UI patterns.</div>
+        </div>
+      </div>
+    </button>
+    <button class="cert-card" type="button">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="cert-ico">TT</div>
+          <div class="cert-title">Tourism & Travel Management</div>
+          <div class="cert-sub">Diploma course in Tourism and Travel Management</div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <div class="cert-back-content">Diploma covering travel operations, hospitality, and tourism planning.</div>
+        </div>
+      </div>
+    </button>
+    <button class="cert-card" type="button">
+      <div class="card-inner">
+        <div class="card-front">
+          <div class="cert-ico">TM</div>
+          <div class="cert-title">Trichy District Museum</div>
+          <div class="cert-sub">Completed internship at Trichy District Museum</div>
+        </div>
+        <div class="card-back" aria-hidden="true">
+          <div class="cert-back-content">Internship experience in curation, research, and visitor engagement.</div>
+        </div>
+      </div>
+    </button>
+  </div>
+</section>
+<div class="neon-line"></div>
+
+<section id="contact">
+  <div class="contact-wrap">
+    <div class="contact-pre reveal">Get in touch</div>
+    <h2 class="contact-big reveal">Let's Create<br>Something <span>Memorable.</span></h2>
+    <p class="contact-sub reveal">Open to UI/UX design work, graphic design projects, branding materials, and creative collaborations.</p>
+    <div class="contact-grid reveal">
+      <a href="mailto:kishorekuz98@gmail.com" class="c-link"><span class="ci">MAIL</span>kishorekuz98@gmail.com</a>
+      <a href="tel:9087516057" class="c-link"><span class="ci">CALL</span>9087516057</a>
+      <a href="#about" class="c-link"><span class="ci">LOC</span>Tiruchirappalli</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-logo">KK<span>.</span>DESIGN</div>
+  <div class="f-copy">© 2026 Kishore Kumar R - Graphic & UI/UX Designer</div>
+</footer>
+
+<div class="lightbox" id="projectLightbox" aria-hidden="true">
+  <button class="lightbox-close" type="button" aria-label="Close project output">&times;</button>
+  <div class="lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <div class="lightbox-title" id="lightboxTitle"></div>
+    <img id="lightboxImage" src="" alt="">
+  </div>
+</div>
+
+<div class="case-modal" id="caseModal" aria-hidden="true">
+  <button class="case-close" type="button" aria-label="Close case study">&times;</button>
+  <div class="case-panel" role="dialog" aria-modal="true" aria-labelledby="caseTitle">
+    <div class="case-title" id="caseTitle"></div>
+    <div class="case-desc" id="caseDesc"></div>
+    <div class="case-details" id="caseDetails"></div>
+    <div class="case-tags" id="caseTags"></div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
