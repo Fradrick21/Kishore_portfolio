@@ -5,6 +5,12 @@
 
 const hamburger = document.getElementById('navHamburger');
 const drawer = document.getElementById('navDrawer');
+const mobileQuery = window.matchMedia('(max-width: 640px)');
+
+if (mobileQuery.matches && window.location.hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+  window.scrollTo(0, 0);
+}
 
 function closeDrawer() {
   hamburger.classList.remove('open');
@@ -54,6 +60,16 @@ function closeProjectOutput() {
 
 document.querySelectorAll('.project-output').forEach(button => {
   button.addEventListener('click', () => openProjectOutput(button));
+});
+
+document.querySelectorAll('.cert-output').forEach(card => {
+  card.addEventListener('click', () => openProjectOutput(card));
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openProjectOutput(card);
+    }
+  });
 });
 
 lightboxClose.addEventListener('click', closeProjectOutput);
@@ -119,6 +135,46 @@ const caseStudies = {
       'Created a modern illustration style that balances emotional narrative with graphic structure.'
     ],
     tags: ['Vector Art', 'Illustrator', 'Abstract', 'Composition']
+  },
+  macaw: {
+    title: 'Scarlet Macaw — Wildlife Poster Design',
+    desc: 'An editorial-style wildlife poster combining bold serif typography with vivid macaw photography to celebrate nature and biodiversity.',
+    details: [
+      'Designed a type-behind-image layout where large "PARROT" lettering sits behind the bird to add depth and visual interest.',
+      'Used a clean white background and muted olive typography to keep focus on the photography and copy.',
+      'Included short educational captions to give the poster an informative, editorial feel.'
+    ],
+    tags: ['Poster Design', 'Photoshop', 'Typography', 'Editorial Layout']
+  },
+  coffee: {
+    title: 'Sometimes — Coffee Ad Creative',
+    desc: 'A warm, mood-driven social media ad built around a heart-shaped steam illustration and a relatable one-line message.',
+    details: [
+      'Composed a cinematic brown-toned background to make the coffee cup and latte art the clear focal point.',
+      'Added a playful heart-shaped steam effect and a UI-style context menu to give the ad a witty, tech-meets-lifestyle twist.',
+      'Paired soft script and bold sans typography to deliver the message with warmth and clarity.'
+    ],
+    tags: ['Social Media Ad', 'Photoshop', 'Product Design', 'Typography']
+  },
+  shoesmain: {
+    title: 'Step Into Comfort — Footwear Ad Design',
+    desc: 'A product-focused e-commerce ad for the Shoesmain brand, highlighting comfort, durability, and everyday wearability.',
+    details: [
+      'Used a split-tone background to add visual contrast while keeping the white sneaker as the hero element.',
+      'Designed simple line icons and labels to call out lightweight, durable, and everyday-ready features at a glance.',
+      'Included a clear CTA button and brand logo placement optimized for e-commerce and social ad placements.'
+    ],
+    tags: ['E-commerce Ad', 'Photoshop', 'Product Photography', 'Icon Design']
+  },
+  streetwear: {
+    title: 'Streetwear Redefined — Fashion Lookbook',
+    desc: 'A fashion lookbook poster showcasing a checkered shirt outfit across multiple poses for a cohesive campaign feel.',
+    details: [
+      'Arranged multiple model poses side by side to show the outfit from different angles in one unified composition.',
+      'Used a soft neutral background with a faded portrait accent to add depth without competing with the outfit.',
+      'Paired an elegant serif headline with minimal supporting copy for a premium streetwear campaign look.'
+    ],
+    tags: ['Fashion Design', 'Photoshop', 'Lookbook', 'Typography']
   }
 };
 
@@ -154,64 +210,56 @@ caseModal.addEventListener('click', event => {
   if (event.target === caseModal) closeCaseStudy();
 });
 
-const techs = [
-  { label: 'FIG', icon: 'FG', r: 100, color: '#a259ff' },
-  { label: 'UX', icon: 'UX', r: 100, color: '#00d4ff' },
-  { label: 'UI', icon: 'UI', r: 100, color: '#1a6fff' },
-  { label: 'XD', icon: 'XD', r: 100, color: '#ff61f6' },
-  { label: 'PS', icon: 'PS', r: 180, color: '#31a8ff' },
-  { label: 'AI', icon: 'AI', r: 180, color: '#ff9a00' },
-  { label: 'CAN', icon: 'CV', r: 180, color: '#00c4cc' },
-  { label: 'CDR', icon: 'CD', r: 180, color: '#65d46e' },
-  { label: 'BRD', icon: 'BD', r: 180, color: '#00ff9d' },
-  { label: 'LAY', icon: 'LY', r: 180, color: '#2d87ff' },
-];
 
 const wrap = document.getElementById('orbitWrap');
-const cx = 230;
-const cy = 230;
-const innerTechs = techs.filter(t => t.r === 100);
-const outerTechs = techs.filter(t => t.r === 180);
+const techs = [
+  { icon: 'CV', label: 'Canva', color: '#40dfff', r: .45, angle: 225 },
+  { icon: 'XD', label: 'Adobe XD', color: '#ff59d6', r: .34, angle: 270 },
+  { icon: 'BD', label: 'Branding', color: '#a6ff7a', r: .47, angle: 350 },
+  { icon: 'FG', label: 'Figma', color: '#ff6161', r: .34, angle: 22 },
+  { icon: 'UX', label: 'UI/UX', color: '#ffd03d', r: .34, angle: 90 },
+  { icon: 'PS', label: 'Photoshop', color: '#30c8ff', r: .45, angle: 125 },
+  { icon: 'UI', label: 'UI Design', color: '#3bd4ff', r: .34, angle: 155 },
+  { icon: 'AI', label: 'Illustrator', color: '#ffb020', r: .46, angle: 180 }
+];
 
-techs.forEach(t => {
-  const group = t.r === 100 ? innerTechs : outerTechs;
-  const idx = group.indexOf(t);
-  const total = group.length;
-  const angle = (idx / total) * Math.PI * 2;
-
-  const div = document.createElement('div');
-  div.className = 'tech-dot';
-  div.style.left = cx + t.r * Math.cos(angle) - 25 + 'px';
-  div.style.top = cy + t.r * Math.sin(angle) - 25 + 'px';
-  div.style.color = t.color;
-  div.innerHTML = `<span class="ti">${t.icon}</span>${t.label}`;
-  div.dataset.r = t.r;
-  div.dataset.idx = idx;
-  div.dataset.total = total;
-  div.dataset.speed = t.r === 100 ? '.32' : '-.18';
-  wrap.appendChild(div);
-});
-
-let orbitStart = null;
-function animateOrbit(timestamp) {
-  if (!orbitStart) orbitStart = timestamp;
-  const elapsed = (timestamp - orbitStart) / 1000;
-
-  wrap.querySelectorAll('.tech-dot').forEach(dot => {
-    const r = Number(dot.dataset.r);
-    const idx = Number(dot.dataset.idx);
-    const total = Number(dot.dataset.total);
-    const speed = Number(dot.dataset.speed);
-    const angle = (idx / total) * Math.PI * 2 + elapsed * speed;
-
-    dot.style.left = cx + r * Math.cos(angle) - 25 + 'px';
-    dot.style.top = cy + r * Math.sin(angle) - 25 + 'px';
+if (wrap) {
+  techs.forEach((tech, idx) => {
+    const dot = document.createElement('div');
+    dot.className = 'tech-dot';
+    dot.style.setProperty('--badge-color', tech.color);
+    dot.dataset.idx = idx;
+    dot.dataset.ratio = tech.r;
+    dot.dataset.offset = tech.angle * Math.PI / 180;
+    dot.innerHTML = `<span class="tech-icon">${tech.icon}</span><span class="tech-label">${tech.label}</span>`;
+    wrap.appendChild(dot);
   });
+
+  let orbitStart = null;
+  const orbitSpeed = 0.30;
+  function animateOrbit(timestamp) {
+    if (!orbitStart) orbitStart = timestamp;
+    const elapsed = (timestamp - orbitStart) / 1000;
+    const size = wrap.offsetWidth;
+    const cx = size / 2;
+    const cy = size / 2;
+
+    wrap.querySelectorAll('.tech-dot').forEach(dot => {
+      const ratio = Number(dot.dataset.ratio);
+      const offset = Number(dot.dataset.offset);
+      const badgeSize = dot.offsetWidth;
+      const angle = offset + elapsed * orbitSpeed;
+      const r = size * ratio;
+
+      dot.style.left = cx + r * Math.cos(angle) - badgeSize / 2 + 'px';
+      dot.style.top = cy + r * Math.sin(angle) - badgeSize / 2 + 'px';
+    });
+
+    requestAnimationFrame(animateOrbit);
+  }
 
   requestAnimationFrame(animateOrbit);
 }
-
-requestAnimationFrame(animateOrbit);
 
 // --- Project card tilt interaction ---
 function setupProjectCardTilt() {
