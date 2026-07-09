@@ -1473,6 +1473,27 @@ footer {
   transform:none;
 }
 
+.project-subheading {
+  grid-column:1 / -1;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:10px 0 2px;
+  color:var(--cyan);
+  font-family:'Orbitron', sans-serif;
+  font-size:.92rem;
+  font-weight:800;
+  letter-spacing:0;
+  text-transform:uppercase;
+}
+
+.project-subheading::after {
+  content:'';
+  flex:1;
+  height:1px;
+  background:linear-gradient(90deg, rgba(0,229,255,.55), transparent);
+}
+
 .proj-card {
   position:relative;
   display:grid;
